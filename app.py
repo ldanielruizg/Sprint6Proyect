@@ -3,6 +3,11 @@ import plotly.express as px
 import streamlit as st
 car_data = pd.read_csv('notebooks/vehicles_us.csv')
 st.header('Cuadro de Mandos de Anuncios de Ventas de Coches')
+st.write("Configuración del servidor:")
+st.write("Headless:", st.config.get_option("server.headless"))
+st.write("Port:", st.config.get_option("server.port"))
+st.write("Server Address:", st.config.get_option("browser.serverAddress"))
+st.write("Server Port:", st.config.get_option("browser.serverPort"))
 hist_button = st.button('Construir histogramas')
 if hist_button:
     st.write('Creacion de un histograma para el conjunto de datos de anuncios de venta de coches')
